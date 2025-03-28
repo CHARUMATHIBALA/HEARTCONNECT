@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartConnect - Male Profiles</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: linear-gradient(45deg, #FF69B4,#FF69B4);
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h4 {
+            font-weight: bold;
+        }
+
+        button {
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-inner {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #007bff;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .badge {
+            font-size: 0.9em;
+            padding: 5px 10px;
+        }
+
+        .btn {
+            margin: 5px;
+        }
+
+        .btn-success {
+            background: #28a745;
+            border: none;
+        }
+
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-outline-primary {
+            color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+    <script>
+        function applyFilter() {
+            alert("Filtering profiles... (This will be dynamic with backend)");
+        }
+
+        function likeProfile(profileName) {
+            alert("You liked " + profileName + "'s profile!");
+        }
+
+        function chatWithUser(profileName) {
+            alert("Starting chat with " + profileName);
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HeartConnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center p-5 bg-primary text-white">
+        <h1>Find Your Match</h1>
+    </header>
+    
+    <div class="container mt-4">
+        <h4>Filters</h4>
+        <label>Age:</label>
+        <select class="form-select mb-2">
+            <option>18-25</option>
+            <option>26-30</option>
+            <option>31-35</option>
+            <option>36+</option>
+        </select>
+        <label>Religion:</label>
+        <select class="form-select mb-2">
+            <option>Hindu</option>
+            <option>Muslim</option>
+            <option>Christian</option>
+            <option>Other</option>
+        </select>
+        <label>Caste:</label>
+        <input type="text" class="form-control mb-2" placeholder="Enter caste">
+        <button class="btn btn-primary mb-4" onclick="applyFilter()">Apply Filter</button>
+    </div>
+    
+    <div id="profileCarousel" class="carousel slide container" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active text-center">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.WMfCvToSAHe7s-NvEJh-owHaKx&pid=Api&P=0&h=180" class="rounded-circle" alt="Profile">
+                <h5>Rahul, 28 <span class="badge bg-success">Verified</span></h5>
+                <p>Software Developer, Bangalore</p>
+                <button class="btn btn-success">Express Interest</button>
+                <button class="btn btn-outline-danger" onclick="likeProfile('Rahul')">❤️ Like</button>
+                <button class="btn btn-outline-primary" onclick="chatWithUser('Rahul')">💬 Chat</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
